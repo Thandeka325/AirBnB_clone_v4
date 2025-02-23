@@ -1,9 +1,9 @@
 # AirBnB Clone - The Console
-The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
+The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher-level programming. The goal of AirBnB project is to eventually deploy our server with a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
 
 #### Functionalities of this command interpreter:
 * Create a new object (ex: a new User or a new Place)
-* Retrieve an object from a file, a database etc...
+* Retrieve an object from a file, a database, etc...
 * Do operations on objects (count, compute stats, etc...)
 * Update attributes of an object
 * Destroy an object
@@ -161,4 +161,62 @@ David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twit
 
 Second part of Airbnb: Joann Vuong
 ## License
-Public Domain. No copy write protection. 
+Public Domain. No copy write protection.
+
+## __Project: 0x06. AirBnB clone - Web dynamic__
+
+Introduction to web dynamics using jQuery and Flagger (https://github.com/flasgger/flasgger)
+
+__Resources__
+
+- [Selector](https://jquery-tutorial.net/selectors/using-elements-ids-and-classes/#google_vignette)
+- [Get and set content](https://jquery-tutorial.net/selectors/using-elements-ids-and-classes/#google_vignette)
+- [Manipulate CSS classes](https://jquery-tutorial.net/dom-manipulation/getting-and-setting-css-classes/#google_vignette)
+- [Manipulate DOM elements](https://jquery-tutorial.net/dom-manipulation/the-append-and-prepend-methods/)
+- [Document ready](https://learn.jquery.com/using-jquery-core/document-ready/)
+- [Introduction](https://jquery-tutorial.net/ajax/introduction/)
+- [GET & POST request](https://jquery-tutorial.net/ajax/the-get-and-post-methods/)
+- [HTTP access control (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+## __More Info__
+__Import JQuery__
+
+```
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+```
+
+Before starting the project…
+You will work on a codebase using [Flasgger](https://github.com/flasgger/flasgger), you will need to install it locally first before starting the RestAPI:
+```
+$ sudo apt-get install -y python3-lxml
+$ sudo pip3 install flask_cors # if it was not installed yet
+$ sudo pip3 install flasgger
+```
+If the RestAPI is not starting, please read the error message. Based on the(ses) error message(s), you will have to troubleshoot potential dependencies issues.
+
+Here some solutions:
+
+jsonschema exception
+```
+$ sudo pip3 uninstall -y jsonschema 
+$ sudo pip3 install jsonschema==3.0.1
+```
+No module named 'pathlib2'
+```
+$ sudo pip3 install pathlib2
+```
+Expose ports from your Vagrant
+In your Vagrantfile, add this line for each port forwarded
+```
+# I expose the port 5001 of my vm to the port 5001 on my computer
+config.vm.network :forwarded_port, guest: 5001, host: 5001
+```
+if you need to expose other ports, same line but you will need to replace the “guest port” (inside your vagrant) and your “host port” (outside your vagrant, used from your browser for example)
+
+It’s important in your project, to use the AirBnB API with the port `5001`
+
+![image](https://github.com/user-attachments/assets/c3ba657e-8ddd-41dc-b494-4ec40a506150)
+
+
