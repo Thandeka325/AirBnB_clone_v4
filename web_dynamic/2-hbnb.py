@@ -4,7 +4,7 @@ Stars the Flask web application.
 """
 from flask import Flask, render_template, url_for
 from models import storage
-import uuid;
+import uuid
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
